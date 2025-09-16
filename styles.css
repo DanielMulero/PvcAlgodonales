@@ -658,3 +658,38 @@ footer {
  
   transform: scale(1.05);
 }
+
+/* Redes Sociales */
+.redes {
+  text-align: center;
+  padding: 60px 20px;
+  background: #004466;
+  color: #fff;
+}
+
+.redes h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.redes p {
+  margin-bottom: 30px;
+  color: #eee;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-links a img {
+  width: 40px;
+  height: 40px;
+
+}
+
+.social-links a:hover img {
+  transform: scale(1.2);
+
+}
