@@ -60,6 +60,22 @@ nav ul li a::after {
   margin: auto;
 }
 
+
+  /* Asegura que el logo no deforme el header */
+  .logo img {
+    height: 170px; /* ajusta alto del logo */
+    width: auto; /* mantiene proporción */
+    display: block;
+  }
+
+  /* Si quieres más pequeño en móvil */
+  @media (max-width: 768px) {
+    .logo img {
+      height: 140px;
+      width: 160px;
+    }
+  }
+
 nav ul li a:hover::after {
   width: 100%;
 }
@@ -119,8 +135,6 @@ nav ul li a:hover::after {
 #main-header.hide {
   transform: translateY(-100%);
 }
-
-
 
 /* Hero*/
 
@@ -509,12 +523,11 @@ footer {
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* 🔹 Rellena el área sin deformarse */
+  object-fit: cover; /* 🔹 Rellena el área sin deformarse */
   object-position: center; /* 🔹 Centra la parte más importante */
   display: block;
   filter: brightness(0.65) saturate(0.95);
 }
-
 
 /* Slide visible */
 .slide.active {
@@ -643,7 +656,7 @@ footer {
   max-width: 150px;
   max-height: 80px;
   object-fit: contain;
- 
+
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
@@ -655,7 +668,6 @@ footer {
 
 /* Animación al pasar el ratón */
 .marca:hover img {
- 
   transform: scale(1.05);
 }
 
@@ -686,10 +698,119 @@ footer {
 .social-links a img {
   width: 80px;
   height: 80px;
-
 }
 
 .social-links a:hover img {
   transform: scale(1.2);
+}
+/* estilos del botón hamburguesa */
+.menu-toggle {
+  display: none; /* visible solo en móvil */
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1100;
+}
 
+/* líneas del icono */
+.menu-toggle .burger {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+}
+.menu-toggle .burger::before,
+.menu-toggle .burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  transition: transform 0.25s ease, top 0.25s ease, opacity 0.2s;
+}
+.menu-toggle .burger::before {
+  top: -7px;
+}
+.menu-toggle .burger::after {
+  top: 7px;
+}
+
+/* Estilos móviles: muestra hamburguesa y oculta menú por defecto */
+@media (max-width: 768px) {
+  /* compactamos header */
+  #main-header {
+    padding: 8px 14px;
+  }
+  #main-header .logo {
+    font-size: 1.1rem;
+  }
+
+  /* mostrar botón */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 18px;   /* distancia desde arriba */
+    right: 20px; /* esquina derecha */
+    z-index: 1100; /* encima del menú */
+  }
+
+  /* ocultar menú de la vista por defecto */
+  #main-header nav ul {
+    display: none; /* oculto por defecto */
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 12px;
+    background: rgba(0, 68, 102, 0.98);
+    padding: 10px;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 8px;
+    min-width: 160px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1090;
+  }
+
+  #main-header nav ul li {
+    margin: 0;
+  }
+  #main-header nav ul li a {
+    display: block;
+    padding: 8px 12px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  /* cuando se añade la clase .show se muestra */
+  #main-header nav ul.show {
+    display: flex;
+  }
+
+  /* animación sencilla burger -> X (opcional visual) */
+  .menu-toggle.open .burger {
+    background: transparent;
+  }
+  .menu-toggle.open .burger::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .menu-toggle.open .burger::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}
+
+/* en pantallas muy pequeñas ajusta ancho del menú */
+@media (max-width: 420px) {
+  #main-header nav ul {
+    right: 8px;
+    min-width: 140px;
+  }
+  #main-header .logo {
+    font-size: 1rem;
+  }
+  
 }
