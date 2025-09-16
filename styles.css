@@ -596,7 +596,7 @@ footer {
   border: none;
   background: rgba(255, 255, 255, 0.45);
   cursor: pointer;
-  transition: transform 0.15s, background 0.15s;
+  transition: transform 0.10s, background 0.10s;
 }
 
 .carousel-dots button.active {
