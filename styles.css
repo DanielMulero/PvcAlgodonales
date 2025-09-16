@@ -572,10 +572,10 @@ footer {
 }
 
 .carousel-btn.prev {
-  left: 16px;
+  left: 1px;
 }
 .carousel-btn.next {
-  right: 16px;
+  right: 1px;
 }
 
 /* Dots */
