@@ -63,20 +63,66 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
-
-/* Hero 
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
-    url("img/hero.jpg") center/cover no-repeat;
+/* Header sticky con transición */
+#main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
+  padding: 15px 40px;
+  background: rgba(0, 68, 102, 0.9); /* Azul translúcido */
   color: #fff;
-  padding: 20px;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease-in-out;
 }
-*/
+
+#main-header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#main-header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+#main-header nav ul li {
+  margin-left: 25px;
+}
+
+#main-header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+#main-header nav ul li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #ff6600;
+  transition: width 0.3s;
+  margin: auto;
+}
+
+#main-header nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Ocultar header al hacer scroll hacia abajo */
+#main-header.hide {
+  transform: translateY(-100%);
+}
+
+
+
+/* Hero*/
 
 .hero h1 {
   font-size: 3rem;
