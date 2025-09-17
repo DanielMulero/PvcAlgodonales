@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aluminio - Catálogo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="logo">
+        <a href="index.html" class="logo">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+      </div>
+    </header>
+
+    <main class="producto">
+      <h1>Carpintería de Aluminio</h1>
+      <p>
+        Fabricamos ventanas, puertas y cerramientos en aluminio. Máxima
+        resistencia y versatilidad, con acabados modernos y personalizables.
+      </p>
+
+      <!-- Galería -->
+      <section class="galeria-producto">
+        <h2>Galería</h2>
+        <div class="galeria-carousel">
+          <button class="galeria-btn prev">‹</button>
+          <div class="galeria-slides">
+            <img
+              src="img/catalogo/ventanas/ventanas1.jpg"
+              alt="Ventana PVC modelo 1"
+            />
+            <img
+              src="img/catalogo/ventanas/ventanas2.jpg"
+              alt="Ventana PVC modelo 2"
+            />
+            <img
+              src="img/catalogo/ventanas/ventanas3.jpg"
+              alt="Ventana PVC modelo 3"
+            />
+          </div>
+          <button class="galeria-btn next">›</button>
+        </div>
+      </section>
+
+      <!-- Colores -->
+      <section class="colores">
+        <h2>Colores disponibles</h2>
+        <div class="color-carousel">
+          <button class="color-btn prev">‹</button>
+          <div class="color-slide">
+            <img src="img/colores/blanco.jpg" alt="Blanco" />
+            <p>Blanco</p>
+          </div>
+          <div class="color-slide">
+            <img src="img/colores/roble.jpg" alt="Roble" />
+            <p>Roble</p>
+          </div>
+          <div class="color-slide">
+            <img src="img/colores/gris.jpg" alt="Gris Antracita" />
+            <p>Gris Antracita</p>
+          </div>
+          <button class="color-btn next">›</button>
+        </div>
+      </section>
+
+      <!-- Botón de contacto -->
+      <div class="cta-producto">
+        <a href="index.html#contacto" class="btn">Pedir Presupuesto</a>
+      </div>
+    </main>
+
+    <script src="colores.js"></script>
+    <script src="galeria.js"></script>
+    <script src="header.js"></script>
+  </body>
+</html>
