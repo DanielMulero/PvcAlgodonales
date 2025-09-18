@@ -513,7 +513,7 @@ footer {
   text-align: center;
   padding: 6px 0;
   font-size: 14px;
-  height: 200px;
+  height: 65px;
 }
 
 .top-bar a {
@@ -1223,10 +1223,11 @@ header .logo a i {
 }
 
 .ventana-card img {
-  width: 320px;
-  height: 220px;
+   width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .ventana-texto {
@@ -1252,8 +1253,8 @@ header .logo a i {
   }
 
   .ventana-card img {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 200px;
   }
 
   .ventana-texto {
