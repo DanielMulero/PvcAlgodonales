@@ -7,14 +7,43 @@
   </url>
 
   <url>
+    <loc>https://pvcalgodonales.com/#contacto</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://pvcalgodonales.com/blog.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://pvcalgodonales.com/contacto.html</loc>
+    <loc>https://pvcalgodonales.com/ventanas.html</loc>
     <priority>0.8</priority>
   </url>
-  
+
+  <url>
+    <loc>https://pvcalgodonales.com/balcones.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pvcalgodonales.com/ventanales.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pvcalgodonales.com/puertas.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pvcalgodonales.com/vallas-pvc.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pvcalgodonales.com/aluminio.html</loc>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
