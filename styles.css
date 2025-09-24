@@ -101,7 +101,7 @@ header .logoHeader a {
 }
 
 header .logoHeader a:hover {
-  background: linear-gradient(135deg, #21e7f5, #00e1ff);
+  background: linear-gradient(135deg, #00e5ff, #ff6600);
   transform: scale(1.05);
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.35);
 }
@@ -119,9 +119,9 @@ header .logoHeader a i {
 
 /* Si quieres más pequeño en móvil */
 @media (max-width: 768px) {
-  .logo img {
-    height: 140px;
-    width: 160px;
+  .logoHeader img {
+    height: 155px;
+    width: 155px;
   }
 }
 
