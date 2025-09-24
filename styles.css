@@ -1360,7 +1360,7 @@ header .logo a i {
   display: inline-block;
   margin: 20px auto;
   padding: 12px 20px;
-  background: #0073e6;
+  background:  rgba(0, 68, 102, 0.9);
   color: #fff;
   font-weight: bold;
   text-decoration: none;
@@ -1369,7 +1369,7 @@ header .logo a i {
 }
 
 .btn-download:hover {
-  background: #1f8dfa;
+  background: #10a4df;
 }
 .pdf-preview {
   width: 100%;
