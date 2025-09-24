@@ -98,6 +98,47 @@
         </div>
       </section>
 
+      <!-- Catálogo de paneles en PDF -->
+      <section class="catalogo-pdf">
+        <h2>Catálogo de Paneles</h2>
+        <div class="pdf-container">
+          <!-- Panel básico -->
+          <div class="pdf-item" onclick="openPDF('docs/panel-basico.pdf')">
+            <h3>Panel Básico</h3>
+            <div class="pdf-preview">
+              <iframe
+                src="docs/panel-basico.pdf#page=1&zoom=35"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <p>Haz clic para ver más</p>
+          </div>
+
+          <!-- Panel acanalado -->
+          <div class="pdf-item" onclick="openPDF('docs/panel-acanalado.pdf')">
+            <h3>Panel Acanalado</h3>
+            <div class="pdf-preview">
+              <iframe
+                src="docs/panel-acanalado.pdf#page=1&zoom=35"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <p>Haz clic para ver más</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal para visor PDF -->
+      <div id="pdfModal" class="modal">
+        <span class="close" onclick="closePDF()">&times;</span>
+        <div class="modal-content">
+          <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+        </div>
+        <a id="pdfDownload" href="#" download class="btn-download">
+          <i class="fas fa-download"></i> Descargar PDF
+        </a>
+      </div>
+
       <!-- Galería -->
       <section class="galeria-producto">
         <h2>Galería</h2>
@@ -155,13 +196,26 @@
             <p>Blanco</p>
           </div>
           <div class="color-slide">
+            <img src="img/colores/nogal.jpg" alt="Nogal" />
+            <p>Nogal</p>
+          </div>
+          <div class="color-slide">
             <img src="img/colores/roble.jpg" alt="Roble" />
             <p>Roble</p>
+          </div>
+          <div class="color-slide">
+            <img src="img/colores/caoba.jpg" alt="Caoba" />
+            <p>Caoba</p>
           </div>
           <div class="color-slide">
             <img src="img/colores/gris.jpg" alt="Gris Antracita" />
             <p>Gris Antracita</p>
           </div>
+          <div class="color-slide">
+            <img src="img/colores/grisBasalto.jpg" alt="Gris Basalto" />
+            <p>Gris Basalto</p>
+          </div>
+
           <button class="color-btn next">›</button>
         </div>
       </section>
@@ -171,6 +225,24 @@
         <a href="index.html#contacto" class="btn">Pedir Presupuesto</a>
       </div>
     </main>
+
+    <script>
+      function openPDF(pdfUrl) {
+        document.getElementById("pdfViewer").src = pdfUrl;
+        document.getElementById("pdfDownload").href = pdfUrl;
+        document.getElementById("pdfModal").style.display = "block";
+      }
+
+      function closePDF() {
+        document.getElementById("pdfViewer").src = "";
+        document.getElementById("pdfModal").style.display = "none";
+      }
+
+      // Cierra modal con ESC
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closePDF();
+      });
+    </script>
 
     <script src="colores.js"></script>
     <script src="galeria.js"></script>
