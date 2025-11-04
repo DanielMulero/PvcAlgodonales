@@ -1475,3 +1475,65 @@ header .logo a i {
     height: 250px;
   }
 }
+
+/*Seccion publicaciones*/
+
+.redes {
+  background: #f9f9f9;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.redes h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* Contenedor general */
+.social-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Cada tarjeta */
+.social-item {
+  flex: 1 1 400px;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.5rem;
+}
+
+/* Efecto al pasar el ratón */
+.social-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Asegura que los embeds se ajusten */
+.instagram-media,
+.tiktok-embed {
+  width: 100% !important;
+  max-width: 100% !important;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .social-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-item {
+    max-width: 95%;
+  }
+}
